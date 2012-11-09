@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link rel="stylesheet" type="text/css" media="screen" href="css/blitzer/jquery-ui-1.8.20.custom.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="css/ui.jqgrid.css" />
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/i18n/grid.locale-en.js"></script>
+<script type="text/javascript" src="js/jquery.jqGrid.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.20.custom.min.js"></script>
+<script type="text/javascript" src="js/events.js"></script>
+<title>OSU Events</title>
+</head>
+<body>
+	<div class="ui-widget">
+		<label>Filter by category: <select id="categories"></select></label>
+		<label>Filter by venue: <select id="venues"></select></label>
+		<br />
+		<label>Search by event name: <input id="search" type="text"/></label>
+		<a href="#" id="search_button">Search</a>
+		<a href="#" id="reset_button">Reset</a>
+	</div>
+	<table id="event_table"><tr><td/></tr></table>
+	<div id="pager"></div>
+	<div id="detail_wrapper" class="ui-widget ui-helper-hidden">
+		<p>
+			<b><span id="event_name"></span></b>
+			<br />
+			<span id="event_desc"></span>
+		</p>
+		<table style="width:100%; table-layout:fixed;">
+			<tbody>
+				<tr>
+					<td style="width:50%; vertical-align:top;">
+						<label>Date: <span id="event_date"></span></label>
+						<br />
+						<label>Remaining seats: <span id="event_seats"></span></label>
+						<br />
+						<label>Price: <span id="event_price"></span></label>
+					</td>
+					<td style="width:50%; vertical-align:top;">
+						<label>Venue: <span id="event_venue"></span></label>
+						<br />
+						<span id="venue_desc"></span>
+						<br />
+						<br />
+						<label>Address:
+							<span id="venue_address"></span>
+							<br />
+							<span id="venue_city"></span>
+							<span id="venue_state"></span>
+							<span id="venue_zip"></span>
+						</label>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<a href="#" id="buy_button">Buy Ticket</a>
+		<a href="#" id="cancel_button">Cancel</a>
+	</div>
+	<div class="ui-widget">
+		<br />
+		<a href="#" id="demo_button">Load demo events/categories/venues</a>
+	</div>
+	<div id="dialog-not-implemented" title="Not Implemented" class="ui-helper-hidden">
+		<p>
+		<span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 50px 0;"></span>
+		Sorry, this part isn't ready yet.
+		</p>
+	</div>
+</body>
+</html>
